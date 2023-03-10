@@ -1,7 +1,7 @@
 package com.example.twitter.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         feedLoad(feeds)
 
         val storyAdapter = StoryAdapter(stories)
-        val feedAdapter = FeedAdapter(context, feeds)
+        val feedAdapter = FeedAdapter(feeds)
 
         storyList.adapter = storyAdapter
         feedList.adapter = feedAdapter
@@ -60,12 +60,12 @@ class MainActivity : AppCompatActivity() {
         stories.add(Story(R.drawable.image3, "Ibrohim"))
     }
 
-    private fun feedLoad(feeds: ArrayList<Post>) {
-        feeds.add(Post(R.drawable.image1, "Alien Ware", R.drawable.post1))
-        feeds.add(Post(R.drawable.image2, "Khalilov Ibrohim", R.drawable.post2))
-        feeds.add(Post(R.drawable.image3, "Alien Dev", R.drawable.post3))
-        feeds.add(Post(R.drawable.image1, "Alien Ware", R.drawable.post1))
-        feeds.add(Post(R.drawable.image2, "Khalilov Ibrohim", R.drawable.post2))
-        feeds.add(Post(R.drawable.image3, "Alien Dev", R.drawable.post3))
+    private fun feedLoad(feeds: java.util.ArrayList<Post>) {
+        feeds.add(Post(R.drawable.image1, "Alien Ware", intArrayOf(R.drawable.post1)))
+        feeds.add(Post(R.drawable.image2, "Khalilov Ibrohim", intArrayOf(R.drawable.post2, R.drawable.image3)))
+        feeds.add(Post(R.drawable.image3, "Alien Dev", intArrayOf(R.drawable.post3)))
+        feeds.add(Post(R.drawable.image1, "Alien Ware", intArrayOf(R.drawable.post1, R.drawable.image2)))
+        feeds.add(Post(R.drawable.image2, "Khalilov Ibrohim", intArrayOf(R.drawable.post2)))
+        feeds.add(Post(R.drawable.image3, "Alien Dev", intArrayOf(R.drawable.post3)))
     }
 }

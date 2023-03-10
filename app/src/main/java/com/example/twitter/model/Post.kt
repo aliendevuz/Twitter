@@ -1,3 +1,3 @@
 package com.example.twitter.model
 
-class Post(val profile: Int, val name: String, val photo: Int)
+class Post(var profile: Int, var name: String, var photos: IntArray)
