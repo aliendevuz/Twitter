@@ -63,9 +63,9 @@ class MainActivity : AppCompatActivity() {
     private fun feedLoad(feeds: java.util.ArrayList<Post>) {
         feeds.add(Post(R.drawable.image1, "Alien Ware", intArrayOf(R.drawable.post1)))
         feeds.add(Post(R.drawable.image2, "Khalilov Ibrohim", intArrayOf(R.drawable.post2, R.drawable.image3)))
-        feeds.add(Post(R.drawable.image3, "Alien Dev", intArrayOf(R.drawable.post3)))
+        feeds.add(Post(R.drawable.image3, "Alien Dev", "android.resource://" + packageName + "/" + R.raw.video1))
         feeds.add(Post(R.drawable.image1, "Alien Ware", intArrayOf(R.drawable.post1, R.drawable.image2)))
         feeds.add(Post(R.drawable.image2, "Khalilov Ibrohim", intArrayOf(R.drawable.post2)))
-        feeds.add(Post(R.drawable.image3, "Alien Dev", intArrayOf(R.drawable.post3)))
+        feeds.add(Post(R.drawable.image3, "Alien Dev", "android.resource://" + packageName + "/" + R.raw.video2))
     }
 }
